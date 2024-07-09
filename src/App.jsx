@@ -32,6 +32,7 @@ function App() {
           </div>
           <div id="timer-button" className='m-2 flex flex-col justify-between content-around w-1/3'>
             <div id="timer" className='border-2 border-black rounded-md text-5xl p-3'>01:00</div>
+            <div id="counter" className='text-2xl p-3'>Question 1 of 10</div>
             <div id="next-button">
               <button className='bg-feldgrau text-platinum font-bold'>Next question</button>
             </div>
