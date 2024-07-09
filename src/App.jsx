@@ -1,16 +1,23 @@
 import { useState } from 'react'
 import './App.css'
+import Question from './components/Question.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const questions_list = [
+    {question: "Chi è l'autore del ciclo di romanzi della Fondazione?", answer: "Isaac Asimov"},
+    {question: "In quale squadra gioca Gigio Donnarumma", answer: "Paris Saint German"},
+    {question: "Chi è l'attuale primo ministro del governo italiano?", answer: "Giorgia Meloni"}
+  ]
 
   return (
     <>
     <div id="container" className='flex flex-row w-[1024px] m-10 p-4 bg-gray-100 rounded-xl'>
       <div id="left-section" className='w-2/3 flex flex-col justify-between'>
-        <div id="question" className='m-8'>
-          <h2 className='text-3xl text-onyx'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quae porro placeat iste?</h2>
-        </div>
+        <Question
+          currentQuestion={questions_list[0].question}
+        ></Question>
         <div id="word" className='m-8 flex flex-row'>
           <div className='basis-1/12 h-16 mx-1 border-2 border-onyx bg-feldgrau'></div>
           <div className='basis-1/12 h-16 mx-1 border-2 border-onyx bg-feldgrau'></div>
